@@ -1,7 +1,6 @@
 package baekjoon_java;
 
 import java.util.*;
-import java.io.*;
 
 // 백준 2557
 /*
