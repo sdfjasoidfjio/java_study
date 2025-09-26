@@ -108,5 +108,7 @@ public class day1 {
         System.out.println(a * (b % 100 / 10));
         System.out.println(a * (b / 100));
         System.out.println(a * b);
+
+        sc.close();
     }
 }
