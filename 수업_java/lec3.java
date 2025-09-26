@@ -307,7 +307,7 @@ import java.util.*;
 //3-18: 정수가 아닌 문자열을 정수로 변환할 때 예외 발생
 public class lec3 {
     public static void main(String[] args) {
-        String[] stringNumber = { "23", "12", "3.141592", "998" };
+        String[] stringNumber = { "21", "12", "3.141592", "998" };
 
         int i = 0;
         try {
