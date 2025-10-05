@@ -1,0 +1,24 @@
+상속
+
+객체 지향의 상속
+- 부모 클래스에 만들어진 필드, 메소드를 지식클래스가 물려받음
+- 부모의 생물학적 특성을 물려받는 유전과 유사
+
+상속을 통해 간결한 자식 클래스 작성
+- 동일한 특성을 재정의할 필요가 없어 자식 클래스가 간결해짐
+
+상속의 장점
+- 클래스의 간결화
+- 클래스 관리 용이
+- 소프트웨어의 생산성 향상
+
+상속 선언은 extends 키워드 사용
+ex) 
+public class Person{};
+public class Student extends Person{};  //Person 상속받음
+public class StudenWorker extends Student{} //Stdent 상속받음
+
+특징
+- 다중 상속 지원하지 않음
+- 상속 횟수 무제한
+- 상속의 최상위 조상 클래스는 java.lang.Object클래스
