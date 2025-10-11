@@ -73,6 +73,7 @@ public class c {
         for (Shape i : s) {
             i.area();
         }
+        sc.close();
 
     }
 }
