@@ -1,0 +1,24 @@
+# === VS Code 관련 파일 무시 ===
+.vscode/
+.vscode/*
+
+# === Java 컴파일 결과물 무시 ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === IDE 관련 ===
+.idea/
+out/
+bin/
+target/
+*.iml
+
+# === 시스템 파일 ===
+.DS_Store
+Thumbs.db
+
+# === 로그 및 임시파일 ===
+*.log
+*.tmp
