@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>숫자야구 게임</title>
+  <style>
+    body { font-family: "Pretendard", sans-serif; text-align: center; background: #f6f8fa; }
+    #log { margin-top: 20px; white-space: pre-line; font-size: 18px; }
+    input { font-size: 18px; padding: 5px; width: 120px; text-align: center; }
+    button { font-size: 18px; padding: 5px 10px; margin-left: 5px; }
+  </style>
+</head>
+<body>
+  <h1>⚾ 숫자 야구 게임</h1>
+  <p>1~9 사이의 서로 다른 세 자리 숫자를 맞혀보세요!</p>
+  <input id="guess" maxlength="3" placeholder="예: 123">
+  <button onclick="play()">확인</button>
+  <div id="log"></div>
+
+  <script>
+    let answer = [];
+    reset();
+
+    function reset() {
+      answer = [];
+      while (answer.length < 3) {
+        let n = Math.floor(Math.random() * 9) + 1;
+        if (!answer.includes(n)) answer.push(n);
+      }
+      document.getElementById('log').innerText = "게임이 시작되었습니다!";
+    }
+
+    function play() {
+      let input = document.getElementById('guess').value;
+      if (input.length !== 3) {
+        alert("세 자리 숫자를 입력하세요!");
+        return;
+      }
+
+      let user = input.split('').map(Number);
+      let strike = 0, ball = 0;
+
+      for (let i = 0; i < 3; i++) {
+        if (user[i] === answer[i]) strike++;
+        else if (answer.includes(user[i])) ball++;
+      }
+
+      let log = document.getElementById('log');
+      log.innerText += `\n입력: ${input} → ${strike}S ${ball}B`;
+
+      if (strike === 3) {
+        log.innerText += "\n🎉 정답입니다! 게임을 다시 시작합니다.";
+        reset();
+      }
+
+      document.getElementById('guess').value = '';
+    }
+  </script>
+</body>
+</html>
