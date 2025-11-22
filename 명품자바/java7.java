@@ -122,7 +122,7 @@ class HashMapScoreEx{
         while(it.hasNext()){
             String name = it.next();
             int score = scoreMap.get(name);
-            System.out.println(name + " : " + score);
+            System.out.println(name + " : " + score); //
         }
     }
 }
